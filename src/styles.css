@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: linear-gradient(to right, #96CEB4, #FFEEAD);
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.calculator-grid {
+    display: grid;
+    margin-top: 2rem;
+    justify-content: center;
+    grid-template-columns: repeat(4, 5rem);
+    grid-template-rows: minmax(6rem, auto) repeat(5, 5rem);
+}
+
+.calculator-grid>button {
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    color: #FFAD60;
+    border: 1px solid #FFEEAD;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.calculator-grid>button:hover,
+.calculator-grid>button:focus {
+    background-color: rgba(255, 255, 255, 0.5);
+
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+.output {
+    grid-column: 1 / -1;
+    background-color: rgba(216, 84, 79, .2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    padding: 0.75rem;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.output .previous-operand {
+    color: rgba(217, 83, 79, 0.8);
+    font-size: 1rem;
+}
+
+.output .current-operand {
+    color: #D9534F;
+    font-size: 2rem;
+}
+
+.header {
+    color: #D9534F;
+
+}
+
+.footer {
+    margin-top: 30px;
+    color: #D9534F;
+}
+
+a {
+    color: #D9534F;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #96CEB4;
+}
